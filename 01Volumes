@@ -2,4 +2,4 @@ sudo docker volume ls
 
 sudo docker rm -f webserver
 
-sudo docker run -d -name webserver -p 8080:80 -v $(pwd)/www:/usr/share/nginx/html/ nginx
+sudo docker run -d --name webserver -p 8080:80 -v $(pwd)/www:/usr/share/nginx/html/ nginx
