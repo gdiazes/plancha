@@ -15,3 +15,7 @@ apt-get update -y
 apt-get install -y iputils-ping
 
 ping 172.18.0.2
+
+echo "Hola mundo" > /usr/share/nginx/html/index.html
+
+http://localhost:8080
