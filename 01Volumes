@@ -1,0 +1,5 @@
+sudo docker volume ls
+
+sudo docker rm -f webserver
+
+sudo docker run -d -name webserver --mount src=www dst=/src/share/nginx/html/ nginx
