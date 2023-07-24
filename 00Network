@@ -1,0 +1,21 @@
+sudo docker run -d --name mongodb mongo
+sudo docker run -d --name webserver -p 8080:80 nginx
+
+sudo docker network create --attachable tecsupnet
+
+sudo docker network connect tecsupnet mongodb webserver
+
+sudo docker network inspect tecsupnet
+
+sudo docker ps 
+
+sudo docker exec -it webserver bash
+
+apt-get update -y
+apt-get install -y iputils-ping
+
+ping 172.18.0.2
+
+echo "Hola mundo" > /usr/share/nginx/html/index.html
+
+http://localhost:8080
